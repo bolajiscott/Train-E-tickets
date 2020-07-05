@@ -1,7 +1,7 @@
 import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
 import {
-  IonApp,
+  IonApp, IonSplitPane, IonRouterOutlet,
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
@@ -23,11 +23,19 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import Menu from './components/Menu';
+import Splash from './pages/splash/Splash';
+import { Login } from './pages/login/Login';
 
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
-   
+      {/* <Menu /> */}
+      <IonRouterOutlet id="main">
+        {/* <Route path="/" component={Splash} /> */}
+        <Route exact path="/" component={Login} />
+        <Route exact path="/login" component={Login} />
+      </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
 );
