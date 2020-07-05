@@ -21,9 +21,8 @@ export const Login: React.FC = () => {
         if (!password) {
             setPasswordError(true);
         } else {
-            setUsernameError(false);
+            setPasswordError(false);
         }
-
         // if (username && password) {
         //     await setIsLoggedIn(true);
         //     await setUsernameAction(username);
@@ -33,17 +32,17 @@ export const Login: React.FC = () => {
 
     return (
         <IonPage id="login">
-            <IonHeader no-border>
+            {/* <IonHeader no-border>
                 <IonToolbar>
                     <IonButtons slot="start">
                         <IonMenuButton></IonMenuButton>
                     </IonButtons>
                     <IonTitle>Login</IonTitle>
                 </IonToolbar>
-            </IonHeader>
+            </IonHeader> */}
             <IonContent fullscreen class="ion-padding">
                 <IonText>
-                    <h1 className="welcome-text">Welcome Back</h1>
+                    <h1 className="welcome-text">Welcome <br />Back</h1>
                 </IonText>
 
                 <form noValidate onSubmit={login}>
@@ -74,8 +73,8 @@ export const Login: React.FC = () => {
                     </IonList>
 
                     <IonButton type="submit" color="primary" class="ion-text-capitalize" expand="block">Sign In</IonButton>
-                    <IonText className="no-account">
-                        <p>Don’t have an Account?
+                    <IonText>
+                        <p className="no-account">Don’t have an Account?
                             <span className="signup"> sign Up </span>
                         </p>
                     </IonText>
@@ -88,7 +87,7 @@ export const Login: React.FC = () => {
                 </IonRow>
                 <IonButton routerLink="/" color="light" class="ion-text-capitalize" expand="block">Sign in with Google</IonButton>
                 <IonButton routerLink="/" color="light" expand="block" class="ion-text-capitalize">Sign in with Facebook</IonButton>
-            </IonContent>   
+            </IonContent>
         </IonPage >
     );
 };

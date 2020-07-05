@@ -9,13 +9,14 @@ hr {
 .welcome-text {
   font-weight: 800;
   font-size: 40px;
+  line-height: 68px;
 }
 
 ion-button {
   width: 240px;
   height: 45px;
-  border-radius: 9px;
-  margin-top: 22px;
+  --border-radius: 9px;
+  margin: 22px auto;
   color: black;
 }
 
