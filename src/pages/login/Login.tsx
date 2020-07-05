@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { IonContent, IonPage, IonHeader, IonToolbar, IonText, IonList, IonItemDivider, IonItem, IonInput, IonLabel, IonButton, IonRow, IonCol, IonButtons, IonMenuButton, IonTitle } from '@ionic/react';
 import "./Login.css";
+import AuthBtn from '../../components/AuthBtn';
 
 export const Login: React.FC = () => {
 
@@ -85,8 +86,7 @@ export const Login: React.FC = () => {
                     <IonCol size="auto">or</IonCol>
                     <IonCol size="4"><hr /></IonCol>
                 </IonRow>
-                <IonButton routerLink="/" color="light" class="ion-text-capitalize" expand="block">Sign in with Google</IonButton>
-                <IonButton routerLink="/" color="light" expand="block" class="ion-text-capitalize">Sign in with Facebook</IonButton>
+                <AuthBtn></AuthBtn>
             </IonContent>
         </IonPage >
     );
