@@ -22,7 +22,7 @@ export const Signup: React.FC = () => {
             setNameError(false);
         }
 
-        if (!name) {
+        if (!email) {
             setEmailError(true);
         } else {
             setEmailError(false);
