@@ -27,6 +27,7 @@ import Menu from './components/Menu';
 import Splash from './pages/splash/Splash';
 import { Login } from './pages/login/Login';
 import { Signup } from './pages/signup/Signup';
+import Booking from './pages/booking/Booking';
 
 const App: React.FC = () => (
   <IonApp>
@@ -34,7 +35,7 @@ const App: React.FC = () => (
       {/* <Menu /> */}
       <IonRouterOutlet id="main">
         {/* <Route path="/" component={Splash} /> */}
-        <Route exact path="/" component={Signup} />
+        <Route exact path="/" component={Booking} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/signup" component={Signup} />
       </IonRouterOutlet>
