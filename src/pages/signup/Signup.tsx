@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { IonContent, IonPage, IonHeader, IonToolbar, IonText, IonList, IonItemDivider, IonItem, IonInput, IonLabel, IonButton, IonRow, IonCol, IonButtons, IonMenuButton, IonTitle } from '@ionic/react';
 import "./Signup.css";
+
 import SignupBtn from '../../components/SignupBtn';
 
 export const Signup: React.FC = () => {
@@ -31,12 +32,6 @@ export const Signup: React.FC = () => {
         } else {
             setNameError(false);
         }
-        // if (username && password) {
-        //     await setIsLoggedIn(true);
-        //     await setUsernameAction(username);
-        // history.push('/tabs/schedule', { direction: 'none' });
-        // }
-    };
 
     return (
         <IonPage id="login">
@@ -54,6 +49,7 @@ export const Signup: React.FC = () => {
                 </IonText>
 
                 <form noValidate onSubmit={login}>
+
                     <IonList>
                         {/* Name */}
                         <IonItem>
@@ -65,6 +61,7 @@ export const Signup: React.FC = () => {
                                 Name is required
                                 </p>
                         </IonText>}
+
 
                         <IonItem>
                             <IonLabel position="floating">Email Address</IonLabel>
@@ -82,12 +79,30 @@ export const Signup: React.FC = () => {
                             </IonInput>
                         </IonItem>
 
+                        {/* Email Address */}
+                        <IonItem>
+                            <IonLabel position="floating">Email Address</IonLabel>
+                            <IonInput name="email" type="email" value={email} onIonChange={e => setEmail(e.detail.value!)} required>
+                            </IonInput>
+                        </IonItem>
+                        {formSubmitted && emailError && <IonText color="danger">
+                            <p className="ion-padding-start">
+                                Email Address is required
+                                </p>
+                        </IonText>}
+
+                        {/* Password */}
+                        <IonItem>
+                            <IonLabel position="floating">password</IonLabel>
+                            <IonInput name="password" type="password" value={password} onIonChange={e => setPassword(e.detail.value!)} required>
+                            </IonInput>
+                        </IonItem>
+
                         {formSubmitted && passwordError && <IonText color="danger">
                             <p className="ion-padding-start">
                                 Password is required
                                 </p>
                         </IonText>}
-
                         <div className="forgot-password">Forgot password</div>
                     </IonList>
 

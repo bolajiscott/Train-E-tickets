@@ -75,8 +75,8 @@ export const Login: React.FC = () => {
 
                     <IonButton type="submit" color="primary" class="ion-text-capitalize" expand="block">Sign In</IonButton>
                     <IonText>
-                        <p className="no-account">Don’t have an Account?
-                            <span className="signup"> sign Up </span>
+                        <p className="no-account">Don’t have an Account? 
+                            <span className="signup">Sign Up </span>
                         </p>
                     </IonText>
                 </form>
