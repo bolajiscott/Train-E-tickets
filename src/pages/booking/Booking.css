@@ -1,0 +1,25 @@
+.map {
+  position: fixed;
+  height: 431px;
+  width: 100%;
+}
+
+.info {
+  margin-top: 391px;
+  position: absolute;
+  min-height: 276px;
+}
+
+.info.mobile {
+  width: 100%;
+  padding: 8px 16px 0 16px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px 10px 0px 0px;
+  box-sizing: border-box;
+  z-index: 99;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}

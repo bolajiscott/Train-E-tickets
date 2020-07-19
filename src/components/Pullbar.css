@@ -1,0 +1,10 @@
+.pullbar {
+    height: 5px;
+    width: 75px;
+    background-color: #c4c4c4;
+    border-radius: 100px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
