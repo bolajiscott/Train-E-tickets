@@ -1,0 +1,46 @@
+.address-search {
+  --border-radius: 0;
+  --box-shadow: none;
+  padding: 3px;
+}
+
+.address-card {
+  border-radius: 15px;
+}
+
+hr {
+  margin: 0 0 0 50px;
+  background: #d5dde0;
+  border-radius: 6px;
+}
+
+.detail-icon {
+  /* margin-right: 5px; */
+}
+
+.avatar {
+  background: #d5dde0;
+  padding: 7px;
+}
+
+.avatar .detail-icon {
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+}
+
+.station-label {
+  color: #97adb6;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.station {
+  color: #3dc2ff !important;
+  font-size: 15px;
+}
+
+.location {
+  color: #97adb6;
+  font-size: 13px;
+}

@@ -3,6 +3,7 @@ import { IonContent, IonPage, IonHeader, IonToolbar, IonTitle } from '@ionic/rea
 import BaseMap from '../../components/BaseMap';
 import Pullbar from '../../components/Pullbar';
 import './Booking.css'
+import Address from '../../components/Address';
 
 class Booking extends React.Component {
     render() {
@@ -20,6 +21,7 @@ class Booking extends React.Component {
                     </div>
                     <div className="info mobile">
                         <Pullbar></Pullbar>
+                        <Address></Address>
                     </div>
                 </IonContent>
             </IonPage >
