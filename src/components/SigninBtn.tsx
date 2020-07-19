@@ -2,7 +2,7 @@ import React from 'react';
 import './ExploreContainer.css';
 import { IonButton } from '@ionic/react';
 
-const AuthBtn = () => {
+const SigninBtn = () => {
     return (
         <div>
             <IonButton routerLink="/" color="light" class="ion-text-capitalize" expand="block">Sign in with Google</IonButton>
@@ -11,4 +11,4 @@ const AuthBtn = () => {
     );
 };
 
-export default AuthBtn;
+export default SigninBtn;

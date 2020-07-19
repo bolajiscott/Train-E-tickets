@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import { IonContent, IonPage, IonHeader, IonToolbar, IonText, IonList, IonItemDivider, IonItem, IonInput, IonLabel, IonButton, IonRow, IonCol, IonButtons, IonMenuButton, IonTitle } from '@ionic/react';
-import "./Login.css";
-import SigninBtn from '../../components/SigninBtn';
+import "./Signup.css";
+import SignupBtn from '../../components/SignupBtn';
 
-export const Login: React.FC = () => {
+export const Signup: React.FC = () => {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [name, setName] = useState('');
     const [formSubmitted, setFormSubmitted] = useState(false);
     const [usernameError, setUsernameError] = useState(false);
     const [passwordError, setPasswordError] = useState(false);
+    const [nameError, setNameError] = useState(false);
 
     const login = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -23,6 +25,11 @@ export const Login: React.FC = () => {
             setPasswordError(true);
         } else {
             setPasswordError(false);
+        }
+        if (!name) {
+            setNameError(true);
+        } else {
+            setNameError(false);
         }
         // if (username && password) {
         //     await setIsLoggedIn(true);
@@ -43,11 +50,22 @@ export const Login: React.FC = () => {
             </IonHeader> */}
             <IonContent fullscreen class="ion-padding">
                 <IonText>
-                    <h1 className="welcome-text">Welcome <br />Back</h1>
+                    <h1 className="welcome-text">Create <br />Account</h1>
                 </IonText>
 
                 <form noValidate onSubmit={login}>
                     <IonList>
+                        {/* Name */}
+                        <IonItem>
+                            <IonLabel position="floating">Name</IonLabel>
+                            <IonInput name="name" type="text" value={name} spellCheck={false} autocapitalize="off" onIonChange={e => setName(e.detail.value!)} required></IonInput>
+                        </IonItem>
+                        {formSubmitted && nameError && <IonText color="danger">
+                            <p className="ion-padding-start">
+                                Name is required
+                                </p>
+                        </IonText>}
+
                         <IonItem>
                             <IonLabel position="floating">Email Address</IonLabel>
                             <IonInput name="username" type="text" value={username} spellCheck={false} autocapitalize="off" onIonChange={e => setUsername(e.detail.value!)} required></IonInput>
@@ -86,7 +104,7 @@ export const Login: React.FC = () => {
                     <IonCol size="auto">or</IonCol>
                     <IonCol size="4"><hr /></IonCol>
                 </IonRow>
-                <SigninBtn></SigninBtn>
+                <SignupBtn></SignupBtn>
             </IonContent>
         </IonPage >
     );

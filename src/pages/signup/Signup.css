@@ -1,0 +1,37 @@
+#login {
+  background: linear-gradient(0deg, #f6f6f6, #f6f6f6);
+}
+
+hr {
+  background: black;
+}
+
+.welcome-text {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 68px;
+}
+
+ion-button {
+  width: 240px;
+  height: 45px;
+  --border-radius: 9px;
+  margin: 22px auto;
+  color: black;
+}
+
+.signup {
+  color: #585eed;
+}
+
+.forgot-password {
+  margin-top: 38px;
+  text-align: end;
+  color: #767676;
+  font-size: 12px;
+}
+
+.no-account {
+  margin: 21px 0;
+  text-align: center;
+}
