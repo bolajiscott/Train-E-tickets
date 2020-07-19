@@ -1,7 +1,8 @@
 import React from 'react';
 import { IonContent, IonPage, IonHeader, IonToolbar, IonTitle } from '@ionic/react';
 import BaseMap from '../../components/BaseMap';
-
+import Pullbar from '../../components/Pullbar';
+import './Booking.css'
 
 class Booking extends React.Component {
     render() {
@@ -14,7 +15,12 @@ class Booking extends React.Component {
                 </IonHeader>
 
                 <IonContent>
-                    <BaseMap></BaseMap>
+                    <div className="map">
+                        <BaseMap></BaseMap>
+                    </div>
+                    <div className="info mobile">
+                        <Pullbar></Pullbar>
+                    </div>
                 </IonContent>
             </IonPage >
         );
