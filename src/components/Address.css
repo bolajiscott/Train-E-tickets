@@ -44,3 +44,16 @@ hr {
   color: #97adb6;
   font-size: 13px;
 }
+
+#address {
+  background: #ffffff;
+  --ion-background-color: #ffffff;
+}
+
+.show-map {
+  color: #0f4446;
+}
+
+.show-map .detail-icon {
+  color: #0f4446;
+}

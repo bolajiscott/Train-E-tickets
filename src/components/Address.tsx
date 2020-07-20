@@ -11,8 +11,8 @@ const Address = () => {
         stationsArr.push(stations[key]);
     });
     return (
-        <div>
-            <IonItem lines="none" button>
+        <div id="address">
+            <IonItem lines="none" button className="show-map">
                 <IonIcon icon={pin} slot="start" className="detail-icon"></IonIcon>
                 <IonLabel>Show on map</IonLabel>
             </IonItem>
