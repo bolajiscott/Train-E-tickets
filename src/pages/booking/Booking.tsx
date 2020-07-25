@@ -4,29 +4,42 @@ import BaseMap from '../../components/BaseMap';
 import Pullbar from '../../components/Pullbar';
 import './Booking.css'
 import Address from '../../components/Address';
+import { Route, Switch, useRouteMatch } from 'react-router-dom';
+import Outbound from '../../components/Outbound';
 
-class Booking extends React.Component {
-    render() {
-        return (
-            <IonPage id="login" >
-                <IonHeader>
-                    <IonToolbar>
-                        <IonTitle>Select Location</IonTitle>
-                    </IonToolbar>
-                </IonHeader>
+function Booking() {
+    let { path } = useRouteMatch();
+    console.log(path);
 
-                <IonContent>
-                    <div className="map">
-                        <BaseMap></BaseMap>
-                    </div>
-                    <div className="info mobile">
-                        <Pullbar></Pullbar>
-                        <Address></Address>
-                    </div>
-                </IonContent>
-            </IonPage >
-        );
-    }
+    return (
+        <IonPage id="login" >
+            <IonHeader>
+                <IonToolbar>
+                    <IonTitle>Select Location</IonTitle>
+                </IonToolbar>
+            </IonHeader>
+
+            <IonContent>
+                <div className="map">
+                    <BaseMap></BaseMap>
+                </div>
+                <div className="info mobile">
+                    <Pullbar></Pullbar>
+                    <Switch>
+                        <Route exact path={path}>
+                            <h3>Hello world</h3>
+                        </Route>
+                        <Route path={`${path}/address`}>
+                            <Address></Address>
+                        </Route>
+                        <Route path={`${path}/outbound`}>
+                            <Outbound></Outbound>
+                        </Route>
+                    </Switch>
+                </div>
+            </IonContent>
+        </IonPage >
+    );
 };
 
 export default Booking;
