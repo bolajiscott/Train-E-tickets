@@ -1,11 +1,11 @@
 import React from 'react';
-import { IonContent, IonPage, IonHeader, IonToolbar, IonTitle } from '@ionic/react';
+import { IonContent, IonPage, IonHeader, IonToolbar, IonTitle, IonRouterOutlet } from '@ionic/react';
 import BaseMap from '../../components/BaseMap';
 import Pullbar from '../../components/Pullbar';
 import './Booking.css'
 import Address from '../../components/Address';
-import { Route, Switch, useRouteMatch } from 'react-router-dom';
 import Outbound from '../../components/Outbound';
+import { Route, useRouteMatch, Switch } from 'react-router-dom';
 
 function Booking() {
     let { path } = useRouteMatch();
@@ -26,15 +26,8 @@ function Booking() {
                 <div className="info mobile">
                     <Pullbar></Pullbar>
                     <Switch>
-                        <Route exact path={path}>
-                            <h3>Hello world</h3>
-                        </Route>
-                        <Route path={`${path}/address`}>
-                            <Address></Address>
-                        </Route>
-                        <Route path={`${path}/outbound`}>
-                            <Outbound></Outbound>
-                        </Route>
+                        <Route exact path="/booking/address" component={Address} />
+                        <Route exact path="/booking/outbound" component={Outbound} />
                     </Switch>
                 </div>
             </IonContent>
